@@ -13,7 +13,6 @@ gitify(
   }
   , function (err) {
     if (err) return console.error('err: ', err);
-    
     console.log('Success');
   }
 );
@@ -31,7 +30,11 @@ gitify(
     - username: github username
     - password: github password
     - reponame: name under which the repo should be published on github
+    - description: description of the repository
 
+## Commandline
+
+    gitify [<reponame> <username> <password>]
 
 ## License
 

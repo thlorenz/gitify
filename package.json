@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Tool to create a remote github repository and add and push content to it.",
   "main": "index.js",
+  "bin": "bin/gitify.js",
   "scripts": {
     "test-main": "tap test/*.js",
     "test-0.8": "nave use 0.8 npm run test-main",

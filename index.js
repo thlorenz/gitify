@@ -11,20 +11,22 @@ var gitify = module.exports = function (opts, cb) {
     cb = opts;
     opts = {};
   }
+  var reponame = opts.reponame || reponame()
 
   credentials(opts, function (err, creds) {
     if (err) return cb(err);
     createRepo(
         creds.uname
       , creds.pwd
-      , opts.name        || reponame()
+      , reponame
       , opts.description || ''
       , oncreated
     );
+
+    function oncreated (err) {
+      if (err) return cb(err);
+      initRepo(creds.uname, reponame, cb);
+    }
   });
 
-  function oncreated (err) {
-    if (err) return cb(err);
-    initRepo(cb);
-  }
 };
