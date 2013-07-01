@@ -1,4 +1,4 @@
-# gitify [![build status](https://secure.travis-ci.org/thlorenz/gitify.png)](http://travis-ci.org/thlorenz/gitify)
+# gitify
 
 Tool to create a remote github repository and add and push content to it.
 
