@@ -59,9 +59,10 @@ test('\ninit repo create repository, adds all files, adds remote and commits', f
               ]
             , 'adds origin remotes'
           )
-          
-          process.chdir(cwd)
-          t.end()
+          rmrf(path.join(repodir, '.git'), function () {
+            process.chdir(cwd)
+            t.end()
+          })
         })
       })
     })
