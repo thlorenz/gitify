@@ -15,7 +15,8 @@
   "dependencies": {
     "request": "~2.21.0",
     "runnel": "~0.3.2",
-    "promfig": "~0.1.0"
+    "promfig": "~0.1.0",
+    "configurate": "~0.1.1"
   },
   "devDependencies": {
     "nave": "~0.4.3",

@@ -13,7 +13,7 @@ var gitify = module.exports = function (opts, cb) {
   }
   var reponame = opts.reponame || reponame()
 
-  credentials(opts, function (err, creds) {
+  credentials(function (err, creds) {
     if (err) return cb(err);
     createRepo(
         creds.uname
