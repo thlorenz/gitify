@@ -4,8 +4,8 @@ var gitify = require('..')
   , argv = process.argv;
 
 var repo     =  argv[2]
-  , password =  argv[3]
-  , user     =  argv[4];
+  , user     =  argv[3]
+  , password =  argv[4];
   
 gitify(
     { user     :  user

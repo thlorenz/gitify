@@ -6,15 +6,16 @@ var createRepo  =  require('./lib/create-repo')
   , getRepo     =  require('./lib/repo');
 
 
-var gitify = module.exports = function (opts, cb) {
+var go = module.exports = function (opts, cb) {
   if (typeof opts === 'function') {
     cb = opts;
     opts = {};
   }
-  var repo = opts.repo || getRepo()
+  var repo = opts.repo || getRepo();
 
-  credentials(function (err, creds) {
+  credentials(opts, function (err, creds) {
     if (err) return cb(err);
+    
     createRepo(
         creds.user
       , creds.password
