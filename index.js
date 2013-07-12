@@ -3,7 +3,7 @@
 var createRepo  =  require('./lib/create-repo')
   , initRepo    =  require('./lib/init-repo')
   , credentials =  require('./lib/credentials')
-  , reponame    =  require('./lib/reponame');
+  , getRepo     =  require('./lib/repo');
 
 
 var gitify = module.exports = function (opts, cb) {
@@ -11,22 +11,21 @@ var gitify = module.exports = function (opts, cb) {
     cb = opts;
     opts = {};
   }
-  var reponame = opts.reponame || reponame()
+  var repo = opts.repo || getRepo()
 
   credentials(function (err, creds) {
     if (err) return cb(err);
     createRepo(
-        creds.uname
-      , creds.pwd
-      , reponame
+        creds.user
+      , creds.password
+      , repo
       , opts.description || ''
       , oncreated
     );
 
     function oncreated (err) {
       if (err) return cb(err);
-      initRepo(creds.uname, reponame, cb);
+      initRepo(creds.user, repo, cb);
     }
   });
-
 };

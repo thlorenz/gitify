@@ -2,11 +2,11 @@
 
 var gitify = require('..');
 
-// change username and password to match your github account to see it in action
+// change user and password to match your github account to see it in action
 gitify(
-  { username: 'joe'
-  , password: 'secret'
-  , reponame: 'foo'   // if no reponame is given, the current folder name is used
+  { user     :  'joe'
+  , password :  'secret'
+  , repo     :  'foo'   // if no repo is given, the current folder name is used
   }
   , function (err) {
     if (err) return console.error('err: ', err);

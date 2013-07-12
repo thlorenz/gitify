@@ -1,17 +1,23 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 
 var gitify = require('..')
   , argv = process.argv;
 
-var reponame = argv[2]
-  , password = argv[3]
-  , username = argv[4];
+var repo     =  argv[2]
+  , password =  argv[3]
+  , user     =  argv[4];
   
-gitify({ 
-    username: username
-  , password: password
-  , reponame: reponame }
+gitify(
+    { user     :  user
+    , password :  password
+    , repo     :  repo 
+    }
   , function (err) {
-  if (err) return console.error(err);
-  console.log('The current directory was successfully gitified.');
-});
+      if (err) { 
+        console.error(err);
+        if (err.err && err.err.errors) console.error(err.err.errors);
+        return;
+      }
+      console.log('The current directory was successfully gitified.');
+    }
+);
