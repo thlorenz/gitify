@@ -32,7 +32,7 @@ gitify(
     - repo        :  name under which the repo should be published on github (defaults to current dir name)
     - description :  description of the repository (default empty)
 
-**\*** if user and/or password are not supplied, they will be obtained by prompting the user on the first gitify run and
+\* if user and/or password are not supplied, they will be obtained by prompting the user on the first gitify run and
 saved into a config at: `~/.config/gitify.js` for future runs 
 
 ## Commandline
