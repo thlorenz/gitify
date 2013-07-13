@@ -1,6 +1,6 @@
 {
   "name": "gitify",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Tool to create a remote github repository and add and push content to it.",
   "main": "index.js",
   "bin": "bin/gitify.js",
