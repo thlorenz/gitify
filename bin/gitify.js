@@ -3,14 +3,16 @@
 var gitify = require('..')
   , argv = process.argv;
 
-var repo     =  argv[2]
-  , user     =  argv[3]
-  , password =  argv[4];
+var repo        =  argv[2]
+  , description =  argv[3]
+  , user        =  argv[4]
+  , password    =  argv[5];
   
 gitify(
-    { user     :  user
-    , password :  password
-    , repo     :  repo 
+    { user        :  user
+    , password    :  password
+    , repo        :  repo
+    , description :  description
     }
   , function (err) {
       if (err) { 

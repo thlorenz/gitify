@@ -37,7 +37,7 @@ saved into a config at: `~/.config/gitify.js` for future runs
 
 ## Commandline
 
-    gitify [<repo> <user> <password>]
+    gitify [<repo> <description> <user> <password>]
 
 ## License
 
