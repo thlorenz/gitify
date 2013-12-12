@@ -1,6 +1,6 @@
 {
   "name": "gitify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tool to create a remote github repository and add and push content to it.",
   "main": "index.js",
   "bin": "bin/gitify.js",
@@ -24,7 +24,14 @@
     "tap": "~0.4.3",
     "rimraf": "~2.2.0"
   },
-  "keywords": [ "git", "create", "init", "repo", "repository", "github" ],
+  "keywords": [
+    "git",
+    "create",
+    "init",
+    "repo",
+    "repository",
+    "github"
+  ],
   "author": {
     "name": "Thorsten Lorenz",
     "email": "thlorenz@gmx.de",
