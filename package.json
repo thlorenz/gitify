@@ -24,7 +24,7 @@
     "tap": "~0.4.3",
     "rimraf": "~2.2.0"
   },
-  "keywords": [],
+  "keywords": [ "git", "create", "init", "repo", "repository", "github" ],
   "author": {
     "name": "Thorsten Lorenz",
     "email": "thlorenz@gmx.de",
