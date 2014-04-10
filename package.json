@@ -3,9 +3,11 @@
   "version": "0.1.1",
   "description": "Tool to create a remote github repository and add and push content to it.",
   "main": "index.js",
-  "bin": "bin/gitify.js",
+  "bin": {
+    "gitify": "bin/gitify.js"
+  },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "node test/init-repo.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -13,16 +15,20 @@
   },
   "homepage": "https://github.com/thlorenz/gitify",
   "dependencies": {
+    "configurate": "~0.1.1",
+    "minimist": "0.0.8",
+    "msee": "^0.1.1",
+    "promfig": "~0.1.0",
     "request": "~2.21.0",
     "runnel": "~0.3.2",
-    "promfig": "~0.1.0",
-    "configurate": "~0.1.1"
+    "string-template": "^0.1.3"
   },
   "devDependencies": {
     "nave": "~0.4.3",
-    "tape": "~1.0.4",
+    "rimraf": "~2.2.0",
     "tap": "~0.4.3",
-    "rimraf": "~2.2.0"
+    "tap-spec": "^0.1.8",
+    "tape": "~1.0.4"
   },
   "keywords": [
     "git",

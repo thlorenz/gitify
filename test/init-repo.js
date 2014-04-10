@@ -48,7 +48,7 @@ test('\ninit repo create repository, adds all files, adds remote and commits', f
     initRepo('joe', 'joerepo', function (err) {
       gitcmd([ 'log', '--oneline' ], function (res) {
         var msg = res.split(' ').splice(1).join(' ')
-        t.equal(msg, '"initial repository"\n', 'includes first commit')
+        t.equal(msg, 'initial repository\n', 'includes first commit')
 
         gitcmd([ 'remote', '-v' ], function (res) {
           t.deepEqual(
