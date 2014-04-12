@@ -1,7 +1,7 @@
 'use strict';
 /*jshint asi: true */
 
-var test = require('tape')
+var test = require('tap').test
   , rmrf = require('rimraf')
   , spawn = require('child_process').spawn
   , path = require('path')
